@@ -1,0 +1,715 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #f4f4f4;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero h1 {
+    text-align: center;
+    margin-top: -3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Services et témoignages */
+.services-preview, .testimonials, .presentation-video {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Vidéo */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.team-grid figure {
+    text-align: center;
+}
+
+.team-grid img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+th {
+    background: #f4f4f4;
+}
+
+/* Formulaire */
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+input, select, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+}
+/* Styles spécifiques à la galerie Maroc */
+.gallery-header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #006233 0%, #C1272D 100%);
+    color: white;
+}
+
+.gallery-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.gallery-header .highlight {
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Filtres */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #006233;
+    background: transparent;
+    color: #006233;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #006233;
+    color: white;
+}
+
+/* Grille de galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item figcaption {
+    padding: 1rem;
+    background: white;
+}
+
+.gallery-item h3 {
+    color: #006233;
+    margin-bottom: 0.5rem;
+}
+
+.city-tag {
+    display: inline-block;
+    background: #C1272D;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Témoignages Maroc */
+.testimonials-morocco {
+    background: #f5f5f5;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.testimonials-morocco h2 {
+    color: #006233;
+    margin-bottom: 2rem;
+}
+
+.testimonial-slider blockquote {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-style: italic;
+}
+
+.testimonial-slider cite {
+    color: #C1272D;
+    font-weight: bold;
+}
+
+/* Footer adapté */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #FFD700;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-header h1 {
+        font-size: 2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+/* Styles pour la page contact Maroc */
+.contact-hero {
+    background: linear-gradient(135deg, #006233 0%, #C1272D 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-hero .highlight {
+    color: #FFD700;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Formulaire */
+.contact-form-wrapper {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form-wrapper h2 {
+    color: #006233;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #C1272D;
+    padding-bottom: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #006233;
+    box-shadow: 0 0 0 2px rgba(0,98,51,0.2);
+}
+
+/* Civilité */
+.civilite-group .radio-group {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.civilite-group input[type="radio"] {
+    width: auto;
+    margin-right: 0.25rem;
+}
+
+.civilite-group label {
+    display: inline;
+    font-weight: normal;
+}
+
+/* Téléphone */
+.phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.phone-prefix {
+    background: #f0f0f0;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-weight: bold;
+    color: #006233;
+}
+
+.phone-input input {
+    border-radius: 0 5px 5px 0;
+}
+
+.form-hint {
+    display: block;
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Checkbox group */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.25rem;
+}
+
+.checkbox-group label {
+    display: inline;
+    font-weight: normal;
+    margin-right: 1rem;
+}
+
+/* Consentement */
+.consent-group,
+.newsletter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.consent-group input,
+.newsletter-group input {
+    width: auto;
+}
+
+.consent-group label,
+.newsletter-group label {
+    display: inline;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.consent-group a {
+    color: #C1272D;
+    text-decoration: none;
+}
+
+.consent-group a:hover {
+    text-decoration: underline;
+}
+
+/* CAPTCHA */
+.captcha-group input {
+    width: 100px;
+}
+
+/* Bouton submit */
+.submit-btn {
+    background: #006233;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #C1272D;
+}
+
+.submit-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Informations de contact */
+.contact-info-wrapper {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-info-section h2 {
+    color: #006233;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #C1272D;
+    padding-bottom: 0.5rem;
+}
+
+.office-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #006233;
+}
+
+.office-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.office-header i {
+    color: #C1272D;
+    font-size: 1.2rem;
+}
+
+.office-header h3 {
+    color: #006233;
+    margin: 0;
+}
+
+.office-card address p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.office-card address i {
+    color: #C1272D;
+    width: 20px;
+}
+
+.office-card a {
+    color: #006233;
+    text-decoration: none;
+}
+
+.office-card a:hover {
+    text-decoration: underline;
+}
+
+.office-hours {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+/* Carte */
+.map-section {
+    margin-top: 2rem;
+}
+
+.map-section h2 {
+    color: #006233;
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.map-credit {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.map-credit a {
+    color: #006233;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+/* Autres contacts */
+.other-contacts {
+    margin-top: 2rem;
+}
+
+.other-contacts h2 {
+    color: #006233;
+    margin-bottom: 1rem;
+}
+
+.contact-channel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-channel i {
+    font-size: 1.5rem;
+    color: #C1272D;
+}
+
+.contact-channel h3 {
+    color: #006233;
+    margin: 0 0 0.25rem 0;
+}
+
+.contact-channel p {
+    margin: 0;
+}
+
+.contact-channel a {
+    color: #006233;
+    text-decoration: none;
+}
+
+.contact-channel a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 1rem;
+    }
+    
+    .contact-form-wrapper,
+    .contact-info-wrapper {
+        padding: 1rem;
+    }
+    
+    .checkbox-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+/* Homepage layout and theme */
+body { background: #f7f9fc; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+header nav { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 0.8rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+header nav .logo { display: flex; align-items: center; gap: 0.35rem; text-decoration: none; color: #111827; font-weight: 800; font-size: 1.05rem; }
+header nav .logo img { width: 34px; height: 34px; }
+header nav .logo .maroc { color: #C1272D; font-weight: 900; }
+header nav ul { display: flex; list-style: none; gap: 0.6rem; margin: 0; }
+header nav ul li a { text-decoration: none; color: #111827; padding: 0.45rem 0.7rem; border-radius: 8px; font-size: 0.95rem; }
+header nav ul li a:hover, header nav ul li a.active { background: #006233; color: #fff; }
+.hero { display: flex; align-items: center; min-height: 62vh; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; padding: 3rem 1rem; color: #fff; position: relative; text-shadow: 0 2px 6px rgba(0,0,0,0.35); }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.25)); z-index: 0; }
+.hero-content { max-width: 760px; margin: 0 auto; text-align: center; z-index: 1; position: relative; }
+.hero .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; color: #A7F3D0; margin-bottom: 0.8rem; }
+.hero h1 { font-size: clamp(1.9rem, 6vw, 3.2rem); margin-bottom: 0.75rem; line-height: 1.25; margin-top: 0; }
+.hero p { font-size: 1rem; margin-bottom: 1rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+.hero-buttons { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.services-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.9rem; margin-top: 1rem; }
+.services-details details { background: #fff; border-radius: 10px; border: 1px solid #dbeafe; padding: 0.9rem 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.services-details summary { cursor: pointer; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+.services-details details[open] summary { color: #006233; }
+.services-details p { margin-top: 0.5rem; color: #334155; }
+.pricing-table { margin-top: 2rem; overflow-x: auto; border-radius: 10px; background: white; border: 1px solid #e2e8f0; padding: 1rem; }
+.pricing-table table { width: 100%; border-collapse: collapse; }
+.pricing-table th, .pricing-table td { border: 1px solid #e2e8f0; padding: 0.6rem; text-align: center; }
+.pricing-table th { background: #f1f5f9; color: #0f172a; }
+.gallery-header { background: linear-gradient(135deg, #006233 0%, #C1272D 100%); color: white; text-align: center; padding: 2rem 1rem; border-radius: 10px; margin: 1rem; }
+@media (max-width: 960px) { header nav { flex-wrap: wrap; gap: 0.5rem; } header nav ul { justify-content: center; width: 100%; } .hero { min-height: 55vh; } .hero h1 { font-size: 2rem; } .services-details { grid-template-columns: 1fr; } .pricing-table { padding: 0.5rem; } }
+
+
